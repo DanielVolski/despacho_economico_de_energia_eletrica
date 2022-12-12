@@ -15,12 +15,11 @@ b = []
 c = []
 d = []
 e = []
-f = []
 
 def obj_func(p):
     summation = 0
     for i in range(0, len(p)):
-        summation += a[i] * p[i] ** 2 + b[i] * p[i] + c[i] + abs(d[i] * sin(e[i] *(p_min[i] - p_max[i])))
+        summation += a[i] * p ** 2 + b[i] * p + c[i] + abs(d[i] * sin(e[i] *(p_min[i] - p_max[i])))
     return summation
 
 file = open(files[0], 'r')
@@ -45,6 +44,3 @@ with file as opened_file:
             e.append(float(opened_file.readline()))
     finally:
         opened_file.close()
-
-print(f)
-
